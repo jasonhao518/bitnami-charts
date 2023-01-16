@@ -1,0 +1,23 @@
+architecture: standalone
+auth:
+  rootPassword: randomPassword
+  database: demo
+  username: demo
+  password: randomPassword
+  replicationPassword: randomPassword
+primary:
+  persistence:
+    size: 5Gi
+  service:
+    type: NodePort
+    annotations:
+      external-dns: "true"
+  podAnnotations:
+    sidecar.istio.io/inject: "false"
+  resources:
+    limits:
+      cpu: 0.5
+      memory: 1Gi
+    requests:
+      cpu: 0.3
+      memory: 512Mi
