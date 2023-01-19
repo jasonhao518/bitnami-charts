@@ -7,7 +7,7 @@ auth:
   replicationPassword: randomPassword
 primary:
   persistence:
-    size: 5Gi
+    size: 2Gi
   service:
     type: NodePort
     annotations:
